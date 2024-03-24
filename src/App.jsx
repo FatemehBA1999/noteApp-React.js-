@@ -14,7 +14,7 @@ function App() {
   };
   const handelCompleteNote = (e) => {
     console.log(e.target.value);
-    const noteId = e.target.value;
+    const noteId = Number(e.target.value);
     const newNotes = notes.map((note) =>
       note.id === noteId ? { ...note, completed: !note.completed } : note
     );
